@@ -1,0 +1,134 @@
+---
+presentations:
+  -
+    file:
+      PinterestPresentation.pdf
+    title:
+      Pinterest
+    description:
+      A presentation about monetizing Pinterest. This presentation was created for the Waterloo Engineering Competition and placed 1st in conjunction with the implementation proposal documents.
+  -
+    file:
+      Adanelon_TissueEngineering.pdf
+    title:
+      Tissue Engineering
+    description:
+      A presentation about monetizing the engineering of human skin tissue. This presentation was created for the Sandford Flemming Foundation Technical Speaking Competition and placed second overall.
+  -
+    file:
+      AGM_Bid.pdf
+    title:
+      Bid for Conference
+    description:
+      This presentation was put together with the intention of hosting a conference of engineering students from across Ontario at the University of Waterloo.
+  -
+    file:
+      PDR_Danelon_StrikeForce_online.pdf
+    title:
+      Strike Force Monitoring
+    description:
+      This presentation was created to present various design configurations for the construction of a strike force monitoring apparatus that would measure the force of a punch from the punching glove surface.
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+  <title>Alessia Danelon - Presentations</title>
+  <style type="text/css">
+html, body, h1, div {
+  padding: 0;
+  margin: 0;
+}
+
+body,html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  color: #848484;
+  font: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 100px;
+}
+
+h1 {
+  color: white;
+  font-size: 41px;
+  text-align: center;
+  padding-top: 10px;
+  background: rgba(143, 36, 36, 1);
+
+}
+
+.pdf-link {
+  text-decoration: none;
+  color: #848484;
+}
+
+.title {
+  font-size: 20px;
+  color:  rgba(143, 36, 36, 1);
+}
+
+.pdf-link:visited .title {
+  color: rgb(61, 59, 59);
+}
+
+.pdf-link:hover .title {
+  text-decoration: underline;
+}
+
+.description {
+  font-size: 14px;
+}
+
+#footer {
+  background-color: white;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  height: 50px;
+
+}
+
+ul {
+  list-style: none;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+}
+
+li {
+  margin-bottom: 30px;
+}
+
+  </style>
+</head>
+
+<body>
+  <div>
+    <h1>Presentations</h1>
+    <ul>
+      {% for presentation in page.presentations %}
+        <li>
+          <a class="pdf-link" href="/presentations/{{presentation.file}}">
+            <span class="title">
+              {{presentation.title}}
+            </span>
+            <p class="description">
+              {{presentation.description}}
+            </p>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div id="footer">
+    <p>Alessia Danelon | danelon.a@gmail.com</p>
+  </div>
+</body>
+
+</html>
