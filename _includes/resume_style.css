@@ -172,7 +172,7 @@ div.section{
 }
 
 .section .description p{
-  padding-bottom: 10px;
+  padding-top: 10px;
 }
 /* end content  section */
 
@@ -183,3 +183,18 @@ div.section{
   text-align:center;
 }
 /* end footer */
+
+#cover-letter {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+}
+
+#cover-letter p{
+  margin-bottom: 10px;
+}
+
+#cover-letter h2{
+  color: rgb(83, 82, 82);
+}
