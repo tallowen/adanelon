@@ -1,0 +1,166 @@
+---
+skills:
+  -
+    Excellent _written, oral, presentation and communication skills_ as demonstrated by giving presentations at conferences, business meetings, and Procter & Gamble product pitches. Recived recognition in various communication skills based competitions. See my presentations [here](http://adanelon.com/presentations/)
+  -
+    Interest in _photography, graphic design_ and _camera technology_ as displayed in presentation slides, landscape photography and course work focus
+  -
+    Outstanding _problem solving skills_ as recognized at various engineering competitions. Recieved recognition at Procter & Gamble for outstanding performance in a project management capacity.
+  -
+    Course work focus in _manufacturing and machining_ with labs in refined controls design, welding and CNC machining
+
+  -
+    Experience in programming in _C++ and MATLAB_ from experience with calculation of machine tool forces for programming of CNC software
+  -
+    _Working knowledge of CAD Softwares_ from mechanical design internship and specialization in course work
+
+
+experiences:
+  -
+    employer: Procter & Gamble
+    title: Information and Decisions Solutions Analyst,
+    date: May 2009-Aug 2009
+    description:
+      -
+        Developed multi-million dollar marketing strategy targeting youth with social media. Presented strategy to marketing executives
+      -
+        Designed a web based user interface to manage change requests
+  -
+    employer: NORR Ingenium Group
+    title: Engineering Intern
+    date: Jan 2012-Apr 2012
+    description:
+      -
+        Designed and drafted HVAC systems including ducting, piping and equipment selections
+      -
+       Created software tools to model HVAC systems
+  -
+    employer: Swallow Acoustic Consultants Ltd.
+    title: Engineering Assistant
+    date: Jan 2010-Apr 2010
+    description:
+      -
+        Prepared full reports requiring the use of vector calculus, architectural acoustics, data organization and understanding of inter-disciplinary criteria
+      -
+        Created and modified CAD drawings, specifications and models
+      -
+        Collaborated with various subcontractors, both on and off site
+
+awards:
+  -
+    Sir Sandford Flemming Foundation Technical Speaking Award, 2nd Place, Nov 2011
+  -
+    Waterloo Engineering Competition, 1st place in Consulting Design Competition, July 2012
+  -
+    University of Waterloo Dean's Leadership Award, May 2010 & May 2011
+  -
+    Canadian Society of Professional Engineers Outstanding Achievement Award, May 2010
+  -
+    Procter and Gamble Power of You Award for Outstanding Employee Achievement, August 2009
+
+activities:
+  -
+    Avid photographer, with interest in landscape photography
+  -
+    Keyboardist, singer and organist in community
+  -
+    Volunteer for engineering outreach initiatives through “Women in Engineering”, University of Waterloo
+
+
+
+---
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+  <title>Alessia Danelon - Resume</title>
+  <style type="text/css">
+    {{ Inline CSS to upload to jobmine properly }}
+    {% include resume_style.css %}
+  </style>
+</head>
+
+<body>
+  <div id="page">
+    <div id="header">
+      <div id="name">
+        <p>ALESSIA<span class="bold">DANELON</span></p>
+      </div>
+      <div id="contact-div">
+        <ul id="contact">
+          <li><span>Phone</span><strong>647 890 4464</strong></li>
+          <li><span>Email</span><strong>danelon.a@gmail.com</strong></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content">
+      <div class="section">
+        <h2>Skills</h2>
+        <div class="item">
+          <div class="description">
+            <ul>
+              {% for skill in page.skills %}
+                <li>{{ skill|markdownify }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <h2>Experience</h2>
+        {% for experience in page.experiences %}
+          <div class="item">
+            <h3><a href="{{ experience.website }}">{{ experience.employer }}</a></h3>
+            <h4>{{ experience.title }}</h4>
+            <div class="date">{{ experience.date }}</div>
+            <div class="description">
+              {% for description in experience.description %}
+                <p>{{ description }}</p>
+              {% endfor %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="section">
+        <h2>Education</h2>
+        <div class="item">
+          <h3>University of Waterloo</h3>
+          <h4>Candidate for Honours Mechanical Engineering, Biomechanical Specialization</h4>
+          <div class="date">2008 - 2013 (expected)</div>
+          <div class="description">
+            <p>Special focus on the subjects of Welding and Joining Processes, as well as Manufacturing and Machining. Experience with C++ and MATLAB coding from coursework, with focus on machine tool coding.</p>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <h2>Awards</h2>
+        <div class="item">
+          <div class="description">
+            <ul>
+              {% for award in page.awards %}
+                <li>{{ award|markdownify }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <h2>Activities and Interests</h2>
+        <div class="item">
+          <div class="description">
+            <ul>
+              {% for activity in page.activities %}
+                <li>{{ activity|markdownify }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <p>Alessia Danelon | adanelon@uwaterloo.ca</p>
+    </div>
+  </div>
+  {% include analytics.html %}
+</body>
+</html>
